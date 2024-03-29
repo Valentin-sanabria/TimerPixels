@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countdown Timers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Timers cuenta atras</h2>
+    <div id="newTimer">
+        <input type="text" id="timerName" placeholder="Nombre">
+        <input type="number" id="timerDuration" placeholder="Duracion en minutos">
+        <button onclick="createTimer()">Agregar timer</button>
+    </div>
+    <ul id="timersList"></ul>
+
+    <audio id="timerSound" src="alarm.mp3" preload="auto"></audio>
+    <button id="soundControl" onclick="toggleSound()">Desactivar sonido</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

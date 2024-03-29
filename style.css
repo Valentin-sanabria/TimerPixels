@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#newTimer {
+    margin-bottom: 20px;
+}
+
+#newTimer input[type="text"], #newTimer input[type="number"] {
+    margin-right: 10px;
+    padding: 8px;
+}
+
+#newTimer button, .timer-btn {
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f0f0f0; 
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.inactive {
+    background-color: #ccc;
+}
