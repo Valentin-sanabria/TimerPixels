@@ -1,6 +1,12 @@
 let timers = JSON.parse(localStorage.getItem('timers')) || [];
 let soundEnabled = true;
 
+let worker = new Worker('worker.js');
+
+worker.onmessage = function(event) {
+    document.getElementById('timer').textContent = event.data;
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     loadTimers();
     updateSoundButton();
@@ -20,6 +26,10 @@ function createTimer() {
     timers.push(timer);
     saveTimers();
     addTimerToList(timer);
+
+    // Start the timer with user-specified duration
+    worker.postMessage({ action: 'start', duration: durationInSeconds });
+
     document.getElementById('timerName').value = '';
     document.getElementById('timerDuration').value = '';
 }
